@@ -5,18 +5,22 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WpfApp1"
       mc:Ignorable="d"
-      Title="Page1" Height="200" Width="200">
+      Title="Page1" Height="310" Width="300">
 
-    <Grid>
+    <StackPanel>
+        <TextBlock x:Name="wynikblock" Height="10" Background="red" FontSize="8" TextAlignment="Center"/>
+
+        <Grid>
+        
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
         </Grid.ColumnDefinitions>
         
             <Button Name="button00" Grid.Row="0" Grid.Column="0" Click="ButtonClick"/>
@@ -28,7 +32,9 @@
             <Button Name="button20" Grid.Row="2" Grid.Column="0" Click="ButtonClick"/>
             <Button Name="button21" Grid.Row="2" Grid.Column="1" Click="ButtonClick"/>
             <Button Name="button22" Grid.Row="2" Grid.Column="2" Click="ButtonClick"/>
-       
+            
+
 
     </Grid>
+    </StackPanel>
 </Page>

@@ -20,6 +20,7 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
@@ -27,7 +28,12 @@ namespace WpfApp1
 
         private void clickPlay(object sender, RoutedEventArgs e)
         {
-            nameMenu.Content = new Page1();
+            Page2 wojtek = new Page2();
+            if (wojtek.czyZalogowany) nameMenu.Content = new Page1();
+            else
+            {
+                MessageBox.Show("Użytkownik nie zalogowany");
+            }
         }
 
         private void clickRegistration(object sender, RoutedEventArgs e)

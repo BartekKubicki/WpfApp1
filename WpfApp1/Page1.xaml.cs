@@ -22,6 +22,8 @@ namespace WpfApp1
     {
         private int currentPlayer = 1;
         private int[,] gameBoard = new int[3, 3];
+        private int lewa;
+        private int prawa;
         public Page1()
         {
             InitializeComponent();
@@ -51,6 +53,14 @@ namespace WpfApp1
                 if (CheckForWinner())
                 {
                     MessageBox.Show("Player " + ((currentPlayer == 1) ? "2" : "1") + " wins!");
+                    if (currentPlayer == 1)
+                    {
+                        lewa++;
+                    }
+                    else
+                    {
+                        prawa++;
+                    }
                     ResetGame();
                 }
                 else if (CheckForTie())
@@ -63,6 +73,7 @@ namespace WpfApp1
 
         private bool CheckForWinner()
         {
+            wynikblock.Text = $"Wynik: {lewa} - {prawa}";
             // Check rows
             for (int row = 0; row < 3; row++)
             {
@@ -123,5 +134,7 @@ namespace WpfApp1
             button21.Content = "";
             button22.Content = "";
         }
+
+
     }
 }

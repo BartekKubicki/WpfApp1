@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClassLibrary1;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,15 @@ namespace WpfApp1
         public Page3()
         {
             InitializeComponent();
+        }
+
+        private void clickSave(object sender, RoutedEventArgs e)
+        {
+            String imiebox = loginbox.Text;
+            String haslobox = passbox.Text;
+
+            Uzytkownik uzytkownik = new Uzytkownik(imiebox, haslobox);
+            Zapisz.zapiszUzytkownikaDoPliku("C:\\Users\\User\\Desktop\\uzytkownicy.txt", uzytkownik);
         }
     }
 }
