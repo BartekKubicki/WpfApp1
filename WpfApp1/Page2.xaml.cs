@@ -20,15 +20,8 @@ namespace WpfApp1
     /// <summary>
     /// Interaction logic for Page2.xaml
     /// </summary>
-    public partial class Page2 : Page
+    public partial class Page2 : Window
     {
-        public bool czyZalogowany { get; set; }
-
-        public Page2(bool czZalogowany)
-        {
-            this.czyZalogowany = czyZalogowany;
-        }
-
         public Page2()
         {
             InitializeComponent();
@@ -53,12 +46,12 @@ namespace WpfApp1
             }
             if(UzytkownikZnaleziony) {
                 MessageBox.Show("zalogowales sie");
-                czyZalogowany = true;
+                Authentication.isAuthenticated = true;
             }
             else
             {
                 MessageBox.Show("nie zalogowales sie");
-                czyZalogowany = false;
+                Authentication.isAuthenticated = true;
             }
         }
     }

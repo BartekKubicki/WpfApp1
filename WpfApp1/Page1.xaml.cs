@@ -18,7 +18,7 @@ namespace WpfApp1
     /// <summary>
     /// Interaction logic for Page1.xaml
     /// </summary>
-    public partial class Page1 : Page
+    public partial class Page1 : Window
     {
         private int currentPlayer = 1;
         private int[,] gameBoard = new int[3, 3];

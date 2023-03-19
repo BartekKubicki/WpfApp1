@@ -19,7 +19,7 @@ namespace WpfApp1
     /// <summary>
     /// Interaction logic for Page3.xaml
     /// </summary>
-    public partial class Page3 : Page
+    public partial class Page3 : Window
     {
         public Page3()
         {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClassLibrary1;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,7 +30,13 @@ namespace WpfApp1
         private void clickPlay(object sender, RoutedEventArgs e)
         {
             Page2 wojtek = new Page2();
-            if (wojtek.czyZalogowany) nameMenu.Content = new Page1();
+            if (Authentication.isAuthenticated)
+            {
+                MainWindow window = new MainWindow();
+                window.Close();
+                Page1 page1 = new Page1();
+                page1.Show();
+            }
             else
             {
                 MessageBox.Show("Użytkownik nie zalogowany");
@@ -38,12 +45,18 @@ namespace WpfApp1
 
         private void clickRegistration(object sender, RoutedEventArgs e)
         {
-            nameMenu.Content = new Page2();
+            MainWindow window = new MainWindow();
+            window.Close();
+            Page2 page2 = new Page2();
+            page2.Show();
         }
 
         private void clickLog(object sender, RoutedEventArgs e)
         {
-            nameMenu.Content = new Page3();
+            MainWindow window = new MainWindow();
+            window.Close();
+            Page3 page3 = new Page3();
+            page3.Show();
         }
     }
 }
