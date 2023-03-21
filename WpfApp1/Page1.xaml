@@ -5,12 +5,12 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WpfApp1"
       mc:Ignorable="d"
-      Title="Page1" Height="310" Width="300">
+      Title="Page1" Height="345" Width="315">
 
     <StackPanel>
-        <TextBlock x:Name="wynikblock" Height="10" Background="red" FontSize="8" TextAlignment="Center"/>
+        <TextBlock x:Name="wynikblock" Height="10" Background="#FFB4BB33" FontSize="8" TextAlignment="Center"/>
 
-        <Grid>
+        <Grid Width="319">
         
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>

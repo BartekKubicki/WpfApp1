@@ -42,10 +42,12 @@ namespace WpfApp1
                 if (currentPlayer == 1)
                 {
                     button.Content = "X";
+                    button.Foreground = new SolidColorBrush(Colors.Red);
                 }
                 else
                 {
                     button.Content = "O";
+                    button.Foreground = new SolidColorBrush(Colors.Blue);
                 }
 
                 currentPlayer = (currentPlayer == 1) ? 2 : 1;
@@ -74,7 +76,7 @@ namespace WpfApp1
         private bool CheckForWinner()
         {
             wynikblock.Text = $"Wynik: {lewa} - {prawa}";
-            // Check rows
+           
             for (int row = 0; row < 3; row++)
             {
                 if (gameBoard[row, 0] != 0 && gameBoard[row, 0] == gameBoard[row, 1] && gameBoard[row, 1] == gameBoard[row, 2])
@@ -83,7 +85,7 @@ namespace WpfApp1
                 }
             }
 
-            // Check columns
+         
             for (int col = 0; col < 3; col++)
             {
                 if (gameBoard[0, col] != 0 && gameBoard[0, col] == gameBoard[1, col] && gameBoard[1, col] == gameBoard[2, col])

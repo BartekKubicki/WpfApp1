@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid VerticalAlignment="Top">
+        Title="MainWindow" Height="103" Width="337">
+    <Grid VerticalAlignment="Top" Height="72">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="69*"/>
             <ColumnDefinition Width="106*"/>
